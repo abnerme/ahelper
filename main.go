@@ -11,10 +11,8 @@ import (
 
 
 func main() {
-
 	
 	fmt.Println("just test") 
-
 }
 
 
