@@ -5,9 +5,9 @@ const Version = "0.0.1"
 
 var (
 	
-	Time = newTime()
+	Time_ = newTime()
 
-	Http = newHttp()
+	Http_ = newHttp()
 
 	Bm = newBianma()
 
