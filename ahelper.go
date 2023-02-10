@@ -1,7 +1,5 @@
 package ahelper
 
-type ahelper struct{}
-
 
 const Version = "0.0.1"
 
@@ -15,7 +13,7 @@ var (
 
 	AnCrypto = newCrypto()
 
-	ANOsf = newOsf()
+	AnOsf = newOsf()
 
 
 

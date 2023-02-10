@@ -7,7 +7,7 @@ import (
 
 type Osf struct{}
 
-func newosf() Osf{
+func newOsf() Osf{
 	return Osf{}
 }
 func (o Osf) Printfln(format string, a ...interface{}) {

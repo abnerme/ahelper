@@ -64,6 +64,6 @@ func (h Http) Post(url string, method string, postdata string, refer string, hea
 
 func (h Http) Post_str(url string, method string, postdata string, refer string, headers map[string]string) string {
 
-	return string(Post(url, method, postdata, refer, headers))
+	return string(newHttp().Post(url, method, postdata, refer, headers))
 
 }
