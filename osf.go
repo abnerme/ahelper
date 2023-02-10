@@ -5,18 +5,18 @@ import (
 	"path/filepath"
 )
 
-type Osf struct{}
+type Osf_an struct{}
 
-func newOsf() Osf{
-	return Osf{}
+func newOsf() Osf_an{
+	return Osf_an{}
 }
-func (o Osf) Printfln(format string, a ...interface{}) {
+func (o Osf_an) Printfln(format string, a ...interface{}) {
 	fmt.Printf(format+"\n", a...)
 
 }
 
 // 取运行目录
-func (o Osf) Getpath_exe() string{
+func (o Osf_an) Getpath_exe() string{
 	path, err := os.Executable()
 	if err != nil {
     fmt.Println(err)

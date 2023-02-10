@@ -5,15 +5,15 @@ const Version = "0.0.1"
 
 var (
 	
-	Time_an = newTime()
+	Time = newTime()
 
-	Http_an = newHttp()
+	Http = newHttp()
 
-	Bm_an = newBianma()
+	Bm = newBianma()
 
-	Jm_an = newCrypto()
+	Jm = newCrypto()
 
-	Osf_an = newOsf()
+	Osf = newOsf()
 
 
 

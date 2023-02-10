@@ -7,15 +7,15 @@ import (
 	"net/http"
 	"strings"
 )
-type Http struct{}
+type Http_an struct{}
 
-func newHttp() Http{
-	return Http{}
+func newHttp() Http_an{
+	return Http_an{}
 }
 	
 
 
-func (h Http) Post(url string, method string, postdata string, refer string, headers map[string]string) []byte {
+func (h Http_an) Post(url string, method string, postdata string, refer string, headers map[string]string) []byte {
 	//这里请注意，使用 InsecureSkipVerify: true 来跳过证书验证` 普通  client := &http.Client{}
 
 	client := &http.Client{Transport: &http.Transport{
@@ -62,7 +62,7 @@ func (h Http) Post(url string, method string, postdata string, refer string, hea
 	return body
 }
 
-func (h Http) Post_str(url string, method string, postdata string, refer string, headers map[string]string) string {
+func (h Http_an) Post_str(url string, method string, postdata string, refer string, headers map[string]string) string {
 
 	return string(newHttp().Post(url, method, postdata, refer, headers))
 
