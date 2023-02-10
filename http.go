@@ -1,4 +1,4 @@
-package http
+package ahelper
 
 import (
 	"crypto/tls"
@@ -7,8 +7,15 @@ import (
 	"net/http"
 	"strings"
 )
+type Http struct{}
 
-func Post(url string, method string, postdata string, refer string, headers map[string]string) []byte {
+func newHttp() Http{
+	return Http{}
+}
+	
+
+
+func (h Http) Post(url string, method string, postdata string, refer string, headers map[string]string) []byte {
 	//这里请注意，使用 InsecureSkipVerify: true 来跳过证书验证` 普通  client := &http.Client{}
 
 	client := &http.Client{Transport: &http.Transport{
@@ -55,7 +62,7 @@ func Post(url string, method string, postdata string, refer string, headers map[
 	return body
 }
 
-func Post_str(url string, method string, postdata string, refer string, headers map[string]string) string {
+func (h Http) Post_str(url string, method string, postdata string, refer string, headers map[string]string) string {
 
 	return string(Post(url, method, postdata, refer, headers))
 

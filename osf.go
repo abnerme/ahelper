@@ -1,18 +1,22 @@
-package osf
-
+package ahelper
 import (
 	"fmt"
 	"os"
 	"path/filepath"
 )
 
-func Printfln(format string, a ...interface{}) {
+type Osf struct{}
+
+func newosf() Osf{
+	return Osf{}
+}
+func (o Osf) Printfln(format string, a ...interface{}) {
 	fmt.Printf(format+"\n", a...)
 
 }
 
 // 取运行目录
-func Getpath_exe() string{
+func (o Osf) Getpath_exe() string{
 	path, err := os.Executable()
 	if err != nil {
     fmt.Println(err)

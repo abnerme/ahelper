@@ -1,4 +1,4 @@
-package bm
+package ahelper
 
 import (
 	"bytes"
@@ -9,18 +9,26 @@ import (
 	"github.com/axgle/mahonia"
 )
 
-func Urlencode(u string) string{
+type Bianma struct{
+	
+}
+
+func newBianma() Bianma{
+
+	return Bianma{}
+}
+func (b Bianma) Urlencode(u string) string{
 	return url.QueryEscape(u)
 }
 
-func Urldecode(u string) string{
+func (b Bianma) Urldecode(u string) string{
 	str,_:= url.QueryUnescape(u)
 	return str
 }
 
 //gbk转utf8
 
-func GbkToUtf8(s []byte) ([]byte, error) {
+func (b Bianma) GbkToUtf8(s []byte) ([]byte, error) {
 
 	reader :=transform.NewReader(bytes.NewReader(s), simplifiedchinese.GBK.NewDecoder())	
 	d, e :=io.ReadAll(reader)
@@ -32,7 +40,7 @@ func GbkToUtf8(s []byte) ([]byte, error) {
 	
 	//utf8转gbk
 	
-func Utf8ToGbk(s []byte) ([]byte, error) {
+func (b Bianma) Utf8ToGbk(s []byte) ([]byte, error) {
 	
 	reader :=transform.NewReader(bytes.NewReader(s), simplifiedchinese.GBK.NewEncoder())
 	
@@ -48,7 +56,7 @@ func Utf8ToGbk(s []byte) ([]byte, error) {
 	
 }
 
-func ConvertToString(src string, srcCode string, tagCode string) string {
+func (b Bianma) ConvertToString(src string, srcCode string, tagCode string) string {
 //ConvertToString("襄阳","gbk","ascii")
 	srcCoder := mahonia.NewDecoder(srcCode)
    
