@@ -2,9 +2,7 @@ package ahelper
 
 import (
 	"strconv"
-	"time"
-
-	
+	"time"	
 )
 
 type Time_an struct{

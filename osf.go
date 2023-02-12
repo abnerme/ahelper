@@ -26,3 +26,15 @@ func (o Osf_an) Getpath_exe() string{
 	//fmt.Println(dir)  // for example /home/user
 	return dir
 }
+
+func (o Osf_an) PathExists(path string) (bool, error) {
+    _, err := os.Stat(path)
+    if err == nil {
+        return true, nil
+    }
+    if os.IsNotExist(err) {
+        return false, nil
+    }
+    return false, err
+}
+

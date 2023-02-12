@@ -14,7 +14,6 @@ func newHttp() Http_an{
 }
 	
 
-
 func (h Http_an) Post(url string, method string, postdata string, refer string, headers map[string]string) []byte {
 	//这里请注意，使用 InsecureSkipVerify: true 来跳过证书验证` 普通  client := &http.Client{}
 
