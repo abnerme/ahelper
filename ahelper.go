@@ -15,6 +15,8 @@ var (
 
 	Osf = newOsf()
 
+	Gpo = newGpool()
+
 
 
 )
